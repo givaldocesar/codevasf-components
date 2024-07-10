@@ -1,0 +1,6 @@
+node_modules
+src/
+components/
+rollup.config.mjs
+tsconfig.json
+typing.d.ts
