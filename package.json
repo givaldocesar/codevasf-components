@@ -1,10 +1,21 @@
 {
   "name": "codevasf-components",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
-  "main": "./src/index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "preversion": "npm run build",
+    "version": "npm publish"
   },
   "repository": {
     "type": "git",
@@ -14,22 +25,20 @@
     "codevasf",
     "react"
   ],
-  "author": "",
+  "author": "Givaldo Cesar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/givaldocesar/codevasf-components/issues"
   },
   "homepage": "https://github.com/givaldocesar/codevasf-components#readme",
-  "dependencies": {
-    "classnames": "^2.5.1",
-    "next": "^14.2.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "sass": "^1.77.7"
-  },
   "devDependencies": {
     "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "typescript-plugin-css-modules": "^5.1.0"
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "classnames": "^2.5.1",
+    "next": "^14.2.5",
+    "react": "^18",
+    "react-dom": "^18"
   }
 }

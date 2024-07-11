@@ -2,11 +2,11 @@ import React from "react";
 import Brand from "./Brand";
 import Navbar from "./Navbar";
 import Menu from "./Menu";
-import IBaseProps from "../interfaces";
+import BaseProps from "../interfaces";
 import styles from "./Header.module.scss";
 
 
-const Header = ({className='', children} : IBaseProps) => {
+const Header = ({className='', children} : BaseProps) => {
     return (
         <div className={`${styles.header} ${className}`}>
             { children }
