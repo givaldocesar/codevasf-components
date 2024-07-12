@@ -1,0 +1,94 @@
+@use "../vars.scss";
+
+.header {
+    display: flex;
+    height: 48px;
+    background-color: vars.$std;
+}
+
+.brand {
+    min-width: vars.$sidebar-width;
+    padding: 0px 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        border: 1px solid white;
+    }
+
+    span {
+        flex: 1;
+        font-size: xx-large;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+.navbar {
+    border-left: 2px solid white;
+    display: flex;
+
+    .menus_area {
+        display: flex;
+    }
+
+    .menu {
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+
+        &.active {
+            background-color: vars.$active;
+        }
+
+        &:hover {
+            background-color: vars.$hover;
+        }
+    }
+
+    .menu_bars {
+        display: none;
+        padding: 0px 10px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: vars.$hover;
+        }
+
+        img {
+            filter: invert(1);
+        }
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+@media (max-width: vars.$layout-breakpoint-small) {
+    .brand {
+        flex: 1;
+        max-width: unset;
+    }
+
+    .navbar {
+        .menus_area {
+            position: absolute;
+            top: 50px;
+            right: 0px;
+            flex-flow: column nowrap;
+            background-color: lightslategray;
+            border: 2px solid white;
+            border-top: none;
+        }
+
+        .menu_bars {
+            display: inline;
+        }
+    } 
+}

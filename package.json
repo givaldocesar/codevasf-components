@@ -1,0 +1,35 @@
+{
+  "name": "codevasf-components",
+  "version": "0.0.2",
+  "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
+  "exports": {
+    ".": "./src/components/index.ts",
+    "./header": "./src/components/header/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/givaldocesar/codevasf-components.git"
+  },
+  "keywords": ["react", "codevasf"],
+  "author": {
+    "name": "Givaldo Cesar",
+    "email": "givaldo.junior@codevasf.gov.br"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/givaldocesar/codevasf-components/issues"
+  },
+  "homepage": "https://github.com/givaldocesar/codevasf-components#readme",
+  "peerDependencies": {
+    "classnames": "^2.5.1",
+    "next": "^14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.77.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.3"
+  }
+}

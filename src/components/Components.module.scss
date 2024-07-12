@@ -1,0 +1,20 @@
+@use "./vars.scss";
+
+.column {
+    padding: 10px;
+    flex: 1;
+    height: 100%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: x-large;
+    border-bottom: 2px solid vars.$std;
+    color: vars.$std;
+}
+
+@media (max-width: vars.$layout-breakpoint-small) {
+    .column {
+        width: 100%;
+    }
+}
