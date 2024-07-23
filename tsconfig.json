@@ -30,6 +30,7 @@
     /* Completeness */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
     "plugins": [
       {
         "name": "next"
@@ -39,5 +40,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["index.d.ts", "src"]
+  "include": ["src"]
 }

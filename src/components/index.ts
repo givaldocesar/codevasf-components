@@ -1,7 +1,3 @@
-import Column from "./Column";
-import Title from "./Title";
-
-export {
-    Column,
-    Title
-}
+export { default as Column } from "./Column";
+export { default as Title } from "./Title";
+import "./globals.css";

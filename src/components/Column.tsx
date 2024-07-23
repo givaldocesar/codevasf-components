@@ -1,10 +1,12 @@
 import React from "react";
 import BaseProps from "../interfaces";
-import styles from "./Components.module.scss";
 
-const Column: React.FC<BaseProps> = ({className, children}) => {
+const Column: React.FC<BaseProps> = ({className="", children}) => {
+    let tailwind = "p-3 flex-1 w-full lg:h-full lg:w-auto ";
+    tailwind += className;
+    
     return (
-        <div className={`${styles.column} ${className || ''}`}>
+        <div className={tailwind}>
             { children }
         </div>
     );
