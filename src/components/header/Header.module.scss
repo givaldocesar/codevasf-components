@@ -1,0 +1,100 @@
+@import "../styles/colors";
+@import "../styles/widths";
+@import "../styles/breakpoints";
+
+.header {
+    display: flex;
+    height: $s-12;
+    background-color: $std;
+}
+
+.brand {
+    padding: 0 $s-1;
+    height: $s-full;
+    display: flex;
+    align-items: center;
+    gap: $s-3;
+    flex: 1;
+
+    img {
+        border: 1px solid white;
+    }
+    
+    span {
+        flex: 1;
+        color: white;
+        font-weight: bold;
+        font-size: xx-large;
+    }
+}
+
+.navbar {
+    border-left: 2px solid white;
+    display: flex;
+    width: $s-16;
+
+    .menus {
+        position: absolute;
+        flex-flow: column nowrap;
+        top: $s-12;
+        right: 0;
+        background-color: $gray-400;
+        border: 2px solid white;
+        border-top: none;
+    }
+
+    .button {
+        padding: 0 $s-2;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $hover;
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+            filter: invert(1);
+        }
+    }
+}
+
+.menu {
+    padding: 0 $s-5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+   
+    &:hover {
+        background-color: $hover;
+    }
+}
+
+.active {
+    background-color: $active;
+}
+
+@media (min-width: $break-large){
+    .brand {
+        min-width: $sidebar;
+        flex: none;
+    }
+
+    .navbar {
+        width: auto;
+
+        .menus {
+            position: static;
+            flex-flow: row nowrap;
+            background-color: transparent;
+            border: none;
+        }
+
+        .button {
+            display: none;
+        }
+    }
+}
+

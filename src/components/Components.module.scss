@@ -1,0 +1,23 @@
+@import "./styles/colors";
+@import "./styles/widths";
+@import "./styles/breakpoints";
+
+.title {
+    font-weight: bold;
+    font-size: x-large;
+    color: $std;
+    border-bottom: 2px solid $std;
+}
+
+.column {
+    padding: $s-3;
+    width: $s-full;
+    flex: 1;
+}
+
+@media (min-width: $break-large){
+    .column {
+        width: auto;
+        height: $s-full;
+    }
+}

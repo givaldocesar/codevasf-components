@@ -1,28 +1,11 @@
 {
   "name": "codevasf-components",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
-  "files": [
-    "dist"
-  ],
   "exports": {
-    ".": "./dist/index.js",
-    "./styles": "./dist/codevasf-styles.css",
-    "./header": "./dist/header/index.js"
-  },
-  "typesVersions": {
-    "*": {
-      ".": [
-        "./dist/index.d.ts"
-      ],
-      "header": [
-        "./dist/header/index.d.ts"
-      ]
-    }
-  },
-  "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs",
-    "prepublishOnly": "npm run build"
+    ".": "./src/components/index.ts",
+    "./cards": "./src/components/cards/index.tsx",
+    "./header": "./src/components/header/index.tsx"
   },
   "repository": {
     "type": "git",
@@ -45,21 +28,11 @@
     "classnames": "^2.5.1",
     "next": "^14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sass": "^1.77.8"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-image": "^3.0.3",
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/react": "^18.3.3",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.39",
-    "rollup": "^4.19.0",
-    "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "tailwindcss": "^3.4.6",
     "tslib": "^2.6.3",
     "typescript": "^5.5.3"
   }

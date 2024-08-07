@@ -1,12 +1,8 @@
-import React from "react";
-import BaseProps from "../interfaces";
+import styles from "./Components.module.scss";
 
-const Title: React.FC<BaseProps> = ({className="", children}) => {
-    let tailwind = "font-bold text-xl text-std border-b-2 border-std ";
-    tailwind += className;
-    
+const Title: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({className="", children}) => {
     return (
-        <h3 className={tailwind}>
+        <h3 className={`${styles.title} ${className}`}>
             { children }
         </h3>
     );

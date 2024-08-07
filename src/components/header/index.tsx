@@ -1,13 +1,8 @@
-import React from "react";
-import { HeaderProps } from "./Header.types";
-import "../globals.css";
+import styles from "./Header.module.scss";
 
-const Header: React.FC<HeaderProps> = ({className="", children}) => {
-    let tailwind = "flex h-12 bg-std";
-    tailwind += className;
-    
+const Header: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", children}) => {
     return (
-        <div className={tailwind}>
+        <div className={`${styles.header} ${className}`}>
             { children }
         </div>
     );
