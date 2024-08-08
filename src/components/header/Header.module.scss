@@ -34,6 +34,7 @@
     width: $s-16;
 
     .menus {
+        display: none;
         position: absolute;
         flex-flow: column nowrap;
         top: $s-12;
@@ -52,8 +53,6 @@
         }
 
         img {
-            width: auto;
-            height: 100%;
             filter: invert(1);
         }
     }
@@ -76,6 +75,10 @@
     background-color: $active;
 }
 
+.show {
+    display: flex !important;
+}
+
 @media (min-width: $break-large){
     .brand {
         min-width: $sidebar;
@@ -86,6 +89,7 @@
         width: auto;
 
         .menus {
+            display: flex;
             position: static;
             flex-flow: row nowrap;
             background-color: transparent;

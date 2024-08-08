@@ -1,11 +1,32 @@
-import React from "react";
-import "../globals.css";
+import { useRef, useEffect } from "react";
+import styles from "./Cards.module.scss";
 
 const CardsArea: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", children}) => {
-    const tailwind = "p-3 " + className;
+    const ref = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        ref.current?.addEventListener("click", (evt) => {
+            evt.stopPropagation();
+            const target = evt.target as Element;
+            const cards = ref.current?.children;
+            
+            if(!cards){ return }
+
+            if(evt.target === ref.current){
+                console.log('pai')
+            } else {
+                for(let i = 0; i < cards.length; i++){
+                    cards.item(i)?.classList.remove(styles.active);
+                }
+                
+                target.classList.add(styles.active);
+            }
+
+        });
+    }, []);
+    
     return (
-        <div className={tailwind}>
+        <div className={`${styles.area} ${className}`} ref={ref}>
             { children }
         </div>
     );

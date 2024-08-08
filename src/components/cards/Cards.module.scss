@@ -1,0 +1,44 @@
+@import "../styles/colors";
+@import "../styles/widths";
+@import "../styles/mixins";
+
+.area {
+    padding: $s-3;
+}
+
+.card {
+    flex: 1;
+    position: relative;
+    background-color: $gray-200;
+    border-radius: $s-3;
+    overflow: hidden;
+    @include transition(flex, 500ms);
+
+    &:hover {
+        cursor: pointer;
+        
+        .overlayer {
+            opacity: 25%;
+        }
+    }
+}
+
+.active {
+    flex: 2 !important;
+
+    .overlayer {
+        opacity: 50%;
+    }
+}
+
+.overlayer {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $s-full;
+    height: $s-full;
+    background-color: black;
+    opacity: 75%;
+    @include transition(opacity, 500ms);
+}

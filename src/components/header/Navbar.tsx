@@ -1,31 +1,22 @@
-import { useState, useEffect } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import styles from "./Header.module.scss";
 import icon from "../../assets/icons/menu.png";
 
 
 const Navbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({children}) => {
-    const [show, setShow] = useState(true);
+    const menus = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        setShow(window.innerWidth > 960);
-        
-        function resize(){ if(window.innerWidth > 960) setShow(true)}
-        window.addEventListener("resize", resize);
-        return () => window.removeEventListener("resize", resize);
-    }, []);
+    function changeVisibility(){ menus.current?.classList.toggle(styles.show) }
 
     return (
         <div className={styles.navbar}>
-            <div className={styles.menus} style={{display: show ? "flex" : "none"}}>
+            <div className={styles.menus} ref={menus}>
                 { children }
             </div>
 
             { !children ? null :
-                <button 
-                    className={styles.button}
-                    onClick={evt => setShow(!show)}
-                >
+                <button className={styles.button} onClick={changeVisibility}>
                     <Image src={icon} alt='menu-bar' width={48} height={48} />
                 </button>
             }

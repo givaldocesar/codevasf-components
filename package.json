@@ -4,6 +4,7 @@
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
   "exports": {
     ".": "./src/components/index.ts",
+    "./styles": "./src/components/globalStyles.css",
     "./cards": "./src/components/cards/index.tsx",
     "./header": "./src/components/header/index.tsx"
   },

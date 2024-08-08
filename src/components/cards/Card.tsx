@@ -1,14 +1,9 @@
-const Card: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", children}) => {
-    let tailwind = "group relative flex-1 bg-gray-200 rounded-xl overflow-hidden";
-    tailwind += " hover:cursor-pointer ";
-    tailwind += className;
+import styles from "./Cards.module.scss";
 
-    let overlayer = "absolute top-0 left-0 w-full h-full bg-black opacity-75";
-    overlayer += " transition-all duration-500 hover:opacity-25";
-    
+const Card: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", children}) => {
     return (
-        <div className={tailwind}>
-            <div className={overlayer} />
+        <div className={`${styles.card} ${className}`}>
+            <div className={styles.overlayer} />
             { children }
         </div>
     );
