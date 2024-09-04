@@ -4,7 +4,7 @@
 
 .title {
     font-weight: bold;
-    font-size: x-large;
+    font-size: large;
     color: $std;
     border-bottom: 2px solid $std;
 }
@@ -16,6 +16,10 @@
 }
 
 @media (min-width: $break-large){
+    .title {
+        font-size: x-large;
+    }
+
     .column {
         width: auto;
         height: $s-full;

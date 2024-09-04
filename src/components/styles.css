@@ -4,19 +4,17 @@ input[type=number]::-webkit-inner-spin-button {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
 }
  
 /* Track */
 ::-webkit-scrollbar-track {
     background: #BBB;
-    border-radius: 5px;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #005000;
-    border-radius: 5px;
 }
  
 /* Handle on hover */

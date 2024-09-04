@@ -13,7 +13,10 @@ const CardsArea: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className=""
             if(!cards){ return }
 
             if(evt.target === ref.current){
-                console.log('pai')
+                for(let i = 0; i < cards.length; i++){
+                    cards.item(i)?.classList.remove(styles.active);
+                }
+            
             } else {
                 for(let i = 0; i < cards.length; i++){
                     cards.item(i)?.classList.remove(styles.active);
@@ -34,3 +37,4 @@ const CardsArea: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className=""
 
 export default CardsArea;
 export { default as Card } from "./Card";
+export { default as CardContent } from "./CardContent";

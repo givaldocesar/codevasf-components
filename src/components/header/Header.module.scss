@@ -53,8 +53,13 @@
         }
 
         img {
+            pointer-events: none;
             filter: invert(1);
         }
+    }
+
+    .button_active {
+        background-color: $active;
     }
 }
 
@@ -77,6 +82,9 @@
 
 .show {
     display: flex !important;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+    z-index: 9999;
 }
 
 @media (min-width: $break-large){

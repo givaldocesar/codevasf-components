@@ -7,7 +7,10 @@ import icon from "../../assets/icons/menu.png";
 const Navbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({children}) => {
     const menus = useRef<HTMLDivElement>(null);
 
-    function changeVisibility(){ menus.current?.classList.toggle(styles.show) }
+    function changeVisibility(evt: React.MouseEvent<HTMLButtonElement>){ 
+        (evt.target as HTMLButtonElement).classList.toggle(styles.button_active);
+        menus.current?.classList.toggle(styles.show) 
+    }
 
     return (
         <div className={styles.navbar}>

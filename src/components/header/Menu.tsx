@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.scss";
 
-const Menu: React.FC<React.LinkHTMLAttributes<HTMLLinkElement>> = ({href, children}) => {
+const Menu: React.FC<React.LinkHTMLAttributes<HTMLLinkElement>> = ({href='', children}) => {
     const currentPath = usePathname();
 
     return (

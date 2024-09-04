@@ -4,7 +4,7 @@
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
   "exports": {
     ".": "./src/components/index.ts",
-    "./styles": "./src/components/globalStyles.css",
+    "./styles": "./src/components/styles.css",
     "./cards": "./src/components/cards/index.tsx",
     "./header": "./src/components/header/index.tsx"
   },
@@ -17,7 +17,7 @@
     "codevasf"
   ],
   "author": {
-    "name": "Givaldo Cesar",
+    "name": "Givaldo Cesar / 1ªSR",
     "email": "givaldo.junior@codevasf.gov.br"
   },
   "license": "ISC",
@@ -34,7 +34,6 @@
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
-    "tslib": "^2.6.3",
     "typescript": "^5.5.3"
   }
 }
