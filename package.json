@@ -5,25 +5,10 @@
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
   "files": ["dist"],
   "exports": {
-    ".": {
-      "types": "./dist/esm/index.d.ts",
-      "import": "./dist/esm/index.es.js",
-      "require": "./dist/cjs/index.js"
-    },
-    "./styles": {
-      "import": "./dist/esm/styles.css",
-      "require": "./dist/cjs/styles.css"
-    },
-    "./cards": {
-      "types": "./dist/esm/cards/index.d.js",
-      "import": "./dist/esm/cards/index.es.js",
-      "require": "./dist/cjs/cards/index.js"
-    },
-    "./header": { 
-      "types": "./dist/esm/header/index.d.js",
-      "import": "./dist/esm/header/index.es.js",
-      "require": "./dist/cjs/header/index.js"
-    }
+    "./styles": { "import": "./dist/styles_components.css" },
+    ".":        { "types": "./dist/index.d.ts", "import": "./dist/index.js"},
+    "./cards":  { "types": "./dist/cards/cards.d.js", "import": "./dist/cards.js" },
+    "./header": { "types": "./dist/header/header.d.js", "import": "./dist/header.js" }
   },
   "scripts": {
     "build": "rollup -c",
@@ -58,16 +43,12 @@
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-image": "^3.0.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.3",
-    "babel-core": "^4.7.16",
-    "babel-loader": "^9.1.3",
     "rollup": "^4.21.3",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-ts": "^3.4.5",
     "typescript": "^5.5.3"
   }
 }
