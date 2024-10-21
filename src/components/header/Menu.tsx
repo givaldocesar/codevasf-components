@@ -1,6 +1,6 @@
 import Link from "next/link";
-import classNames from "classnames";
 import { usePathname } from "next/navigation";
+import classNames from "classnames";
 import styles from "./Header.module.scss";
 
 const Menu: React.FC<React.LinkHTMLAttributes<HTMLLinkElement>> = ({href='', children}) => {

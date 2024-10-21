@@ -1,6 +1,6 @@
-@import "./styles/colors";
-@import "./styles/widths";
-@import "./styles/breakpoints";
+@import "../styles/colors";
+@import "../styles/widths";
+@import "../styles/breakpoints";
 
 .title {
     font-weight: bold;
@@ -13,6 +13,15 @@
     padding: $s-3;
     width: $s-full;
     flex: 1;
+}
+
+.link {
+    padding: 5px 0px;
+    color: $std;
+
+    &:hover {
+        background-color: $lite;
+    }
 }
 
 @media (min-width: $break-large){

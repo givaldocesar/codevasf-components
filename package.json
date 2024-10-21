@@ -1,11 +1,11 @@
 {
   "name": "codevasf-components",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
   "files": ["dist"],
   "exports": {
-    "./styles": { "import": "./dist/styles_components.css" },
+    "./styles": { "import": "./dist/styles.css" },
     ".":        { "types": "./dist/index.d.ts", "import": "./dist/index.js"},
     "./cards":  { "types": "./dist/cards/cards.d.js", "import": "./dist/cards.js" },
     "./header": { "types": "./dist/header/header.d.js", "import": "./dist/header.js" }

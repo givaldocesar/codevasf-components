@@ -12,4 +12,5 @@ export default Header;
 export { Header };
 export { default as Brand } from "./Brand";
 export { default as Navbar } from "./Navbar";
+export { default as DropDownMenu } from "./DropDownMenu";
 export { default as Menu } from "./Menu";

@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 import icon from "../../assets/icons/menu.png";
 
 
-const Navbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({children}) => {
+const Navbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({children, className=""}) => {
     const menus = useRef<HTMLDivElement>(null);
 
     function changeVisibility(evt: React.MouseEvent<HTMLButtonElement>){ 
@@ -13,7 +13,7 @@ const Navbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({children}) => {
     }
 
     return (
-        <div className={styles.navbar}>
+        <div className={`${styles.navbar} ${className}`}>
             <div className={styles.menus} ref={menus}>
                 { children }
             </div>
