@@ -1,36 +1,36 @@
-@import "../styles/colors";
-@import "../styles/widths";
-@import "../styles/breakpoints";
+@use "../styles/colors";
+@use "../styles/widths";
+@use "../styles/breakpoints";
 
 .title {
     font-weight: bold;
     font-size: large;
-    color: $std;
-    border-bottom: 2px solid $std;
+    color: colors.$std;
+    border-bottom: 2px solid  colors.$std;
 }
 
 .column {
-    padding: $s-3;
-    width: $s-full;
+    padding:  widths.$s-3;
+    width:  widths.$s-full;
     flex: 1;
 }
 
 .link {
     padding: 5px 0px;
-    color: $std;
+    color: colors.$std;
 
     &:hover {
-        background-color: $lite;
+        background-color: colors.$lite;
     }
 }
 
-@media (min-width: $break-large){
+@media (min-width: breakpoints.$break-large){
     .title {
         font-size: x-large;
     }
 
     .column {
         width: auto;
-        height: $s-full;
+        height:  widths.$s-full;
     }
 }

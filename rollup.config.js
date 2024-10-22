@@ -23,10 +23,14 @@ export default [
             resolve(),
             commonjs(),
             typescript({ tsconfig: './tsconfig.json' }),
-            postcss( {extract: `styles_components.css`} ) 
+            postcss( {
+                extract: `styles_components.css`,
+                modules: true
+            } ) 
         ]
     },
     rollupTypes({input: "src/components/index.ts", name: "index"}),
     rollupTypes({input: "src/components/cards/index.tsx", name: "cards"}),
-    rollupTypes({input: "src/components/header/index.tsx", name: "header"})
+    rollupTypes({input: "src/components/header/index.tsx", name: "header"}),
+    rollupTypes({input: "src/components/tabs/index.tsx", name: "tabs"})
 ]

@@ -1,0 +1,40 @@
+@use "../styles/colors";
+@use "../styles/widths";
+@use "../styles/breakpoints";
+
+.area {
+    display: flex;
+    flex-flow: column nowrap;
+    border: 1px solid black; 
+}
+
+.tabs {
+    width: widths.$s-full;
+    height: widths.$s-12;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-bottom-width: 2px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.tab {
+    flex: 1;
+    font-size: larger;
+    font-weight: bold;
+
+    &:hover {
+        background-color: colors.$hover;
+        color: white;
+    }
+}
+
+.tab_active {
+    background-color: colors.$active;
+    color: white;
+}
+
+.tab_content {
+    flex: 1;
+    width: widths.$s-full;
+}

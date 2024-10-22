@@ -3,12 +3,15 @@
   "type": "module",
   "version": "1.1.1",
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
-    "./styles": { "import": "./dist/styles.css" },
-    ".":        { "types": "./dist/index.d.ts", "import": "./dist/index.js"},
-    "./cards":  { "types": "./dist/cards/cards.d.js", "import": "./dist/cards.js" },
-    "./header": { "types": "./dist/header/header.d.js", "import": "./dist/header.js" }
+    "./styles": { "import": "./dist/styles.css"},
+    ".": {"types": "./dist/index.d.ts", "import": "./dist/index.js"},
+    "./cards": {"types": "./dist/cards/cards.d.js", "import": "./dist/cards.js"},
+    "./header": {"types": "./dist/header/header.d.js", "import": "./dist/header.js"},
+    "./tabs": {"types": "./dist/header/tabs.d.js", "import": "./dist/tabs.js"}
   },
   "scripts": {
     "build": "rollup -c",
@@ -34,16 +37,16 @@
   "homepage": "https://github.com/givaldocesar/codevasf-components#readme",
   "peerDependencies": {
     "classnames": "^2.5.1",
-    "next": "^14.2.5",
+    "next": "^15.0.0",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.77.8"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-image": "^3.0.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-typescript": "^12.1.1",
     "@types/react": "^18.3.3",
     "rollup": "^4.21.3",
     "rollup-plugin-dts": "^6.1.1",

@@ -1,19 +1,19 @@
-@import "../styles/colors";
-@import "../styles/widths";
-@import "../styles/breakpoints";
+@use "../styles/colors";
+@use "../styles/widths";
+@use "../styles/breakpoints";
 
 .header {
     display: flex;
-    height: $s-12;
-    background-color: $std;
+    height: widths.$s-12;
+    background-color: colors.$std;
 }
 
 .brand {
-    padding: 0 $s-1;
-    height: $s-full;
+    padding: 0  widths.$s-1;
+    height:  widths.$s-full;
     display: flex;
     align-items: center;
-    gap: $s-3;
+    gap:  widths.$s-3;
     flex: 1;
 
     img {
@@ -31,25 +31,24 @@
 .navbar {
     border-left: 2px solid white;
     display: flex;
-    width: $s-16;
+    width:  widths.$s-16;
 
     .menus {
         display: none;
         position: absolute;
         flex-flow: column nowrap;
-        top: $s-12;
+        top:  widths.$s-12;
         right: 0;
-        background-color: $gray-400;
+        background-color: colors.$gray-400;
         border: 2px solid white;
-        border-top: none;
     }
 
     .button {
-        padding: 0 $s-2;
+        padding: 0  widths.$s-2;
 
         &:hover {
             cursor: pointer;
-            background-color: $hover;
+            background-color: colors.$hover;
         }
 
         img {
@@ -59,12 +58,12 @@
     }
 
     .button_active {
-        background-color: $active;
+        background-color: colors.$active;
     }
 }
 
 .menu, .dropdown {
-    padding: 0 $s-5;
+    padding: 0  widths.$s-5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +71,7 @@
     color: white;
    
     &:hover {
-        background-color: $hover;
+        background-color: colors.$hover;
     }
 }
 
@@ -88,30 +87,32 @@
         width: 100%;
         flex-flow: column nowrap;
         display: none;
-        background-color: $gray-400;
+        background-color: colors.$gray-400;
         border: 2px solid white;
         overflow: hidden;
+        z-index: 50;
     }
 
     &:hover .dropped_menus {
         display: flex;
+        top: 0;
+        left: -100%;
+        border-radius: 0;
     }
 }
 
 .active {
-    background-color: $active;
+    background-color: colors.$active;
 }
 
 .show {
     display: flex !important;
-    border-radius: 0px 0px 10px 10px;
-    overflow: hidden;
     z-index: 9999;
 }
 
-@media (min-width: $break-large){
+@media (min-width: breakpoints.$break-large){
     .brand {
-        min-width: $sidebar;
+        min-width:  widths.$sidebar;
         flex: none;
     }
 
@@ -134,7 +135,8 @@
 
     .dropdown { 
         &:hover .dropped_menus {
-            top: calc($s-12);
+            top:  widths.$s-12;
+            left:0;
             border-radius: 0 0 10px 10px;
         }
     }

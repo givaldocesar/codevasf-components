@@ -1,18 +1,18 @@
-@import "../styles/colors";
-@import "../styles/widths";
-@import "../styles/mixins";
+@use "../styles/colors";
+@use "../styles/widths";
+@use "../styles/mixins";
 
 .area {
-    padding: $s-3;
+    padding:  widths.$s-3;
 }
 
 .card {
     flex: 1;
     position: relative;
-    background-color: $gray-200;
-    border-radius: $s-3;
+    background-color: colors.$gray-200;
+    border-radius:  widths.$s-3;
     overflow: hidden;
-    @include transition(flex, 500ms);
+    @include mixins.transition(flex, 500ms);
 
     &:hover {
         cursor: pointer;
@@ -27,7 +27,7 @@
     pointer-events: none;
     opacity: 0;
     max-height: 0;
-    @include transition(all, 500ms);
+    @include mixins.transition(all, 500ms);
 }
 
 .active {
@@ -48,10 +48,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: $s-full;
-    height: $s-full;
+    width:  widths.$s-full;
+    height: widths.$s-full;
     background-color: black;
     opacity: 65%;
     z-index: 1;
-    @include transition(opacity, 500ms);
+    @include mixins.transition(opacity, 500ms);
 }
