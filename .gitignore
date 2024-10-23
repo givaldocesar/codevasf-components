@@ -1,6 +1,10 @@
 node_modules/
 
 # build
-dist/
+dist/*.d.ts
+dist/index.*
+dist/styles_components.css
+
+# misc
 .rollup.cache/
 .tsbuildinfo

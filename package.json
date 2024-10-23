@@ -10,6 +10,7 @@
     "./styles": { "import": "./dist/styles.css"},
     ".": {"types": "./dist/index.d.ts", "import": "./dist/index.js"},
     "./cards": {"types": "./dist/cards/cards.d.js", "import": "./dist/cards.js"},
+    "./events": {"types": "./dist/cards/events.d.js", "import": "./dist/events.js"},
     "./header": {"types": "./dist/header/header.d.js", "import": "./dist/header.js"},
     "./tabs": {"types": "./dist/header/tabs.d.js", "import": "./dist/tabs.js"}
   },

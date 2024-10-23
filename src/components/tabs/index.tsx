@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import classNames from "classnames";
 import styles from "./Tabs.module.scss";
 
-const TabsArea: React.FC<React.HTMLAttributes<HTMLDivElement>&{
+const TabsArea = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>&{
     tabsClassname?: string;
     items?: {title?: string, content?: React.ReactNode}[];
     defaultTab?: number;
-}> = ({
+}>(({
     items=[],
     defaultTab=0,
     className="",
     tabsClassname=""
-}) => {
+}, ref) => {
     const [currentTab, setCurrentTab] = useState<number>(defaultTab);
 
     return (
-        <div className={`${styles.area} ${className}`}>
+        <div className={`${styles.area} ${className}`} ref={ref}>
             <div className={`${styles.tabs} ${tabsClassname}`}>
                 {items.map((item, index) => 
                     <button 
@@ -41,7 +41,7 @@ const TabsArea: React.FC<React.HTMLAttributes<HTMLDivElement>&{
             )}
         </div>
     );
-}
+});
 
 export default TabsArea;
 export {

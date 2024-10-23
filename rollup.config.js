@@ -31,6 +31,7 @@ export default [
     },
     rollupTypes({input: "src/components/index.ts", name: "index"}),
     rollupTypes({input: "src/components/cards/index.tsx", name: "cards"}),
+    rollupTypes({input: "src/components/events/index.ts", name: "events"}),
     rollupTypes({input: "src/components/header/index.tsx", name: "header"}),
     rollupTypes({input: "src/components/tabs/index.tsx", name: "tabs"})
 ]
