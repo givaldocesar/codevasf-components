@@ -3,49 +3,47 @@
 @use "../styles/colors";
 
 
-.layer_icon {
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    width: widths.$s-4;
-    height: widths.$s-4;
-
-    text {
-        font: bold 55px sans-serif;
-        fill: red;
-    }
-
-    span {
-        font: bold 5pt serif;
-    }
-}
-
-.remove_icon {
+    background-color: white;
+    border: 1px solid colors.$std;
     border-radius: 5px;
 
     &:hover {
-        cursor: pointer;
-    }
-
-    line {
-        stroke: black;
-        stroke-linecap: square;
-        stroke-width: 7px;
+        background-color: colors.$hover;
     }
 }
 
-.remove_icon:hover {
-    background-color: colors.$hover;
+.remove_button{
+    width: widths.$s-6;
+    height: widths.$s-6;
 
-    line {
-        stroke: white;
+    svg {
+        line {
+            stroke: black;
+            stroke-linecap: square;
+            stroke-width: 7px;
+        }
+    }
+
+    &:hover {
+        svg {
+            line {
+                stroke: white;
+            }
+        }
     }
 }
 
 @media (min-width: breakpoints.$break-large){
-    .layer_icon {
-        width: widths.$s-6;
-        height: widths.$s-6;
+    .button {
+        border-width: 2px;
+    }
+    
+    .remove_button {
+        width: widths.$s-7;
+        height: widths.$s-7;
     }
 }

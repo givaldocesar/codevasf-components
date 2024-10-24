@@ -9,10 +9,11 @@
   "exports": {
     "./styles": { "import": "./dist/styles.css"},
     ".": {"types": "./dist/index.d.ts", "import": "./dist/index.js"},
-    "./cards": {"types": "./dist/cards/cards.d.js", "import": "./dist/cards.js"},
-    "./events": {"types": "./dist/cards/events.d.js", "import": "./dist/events.js"},
-    "./header": {"types": "./dist/header/header.d.js", "import": "./dist/header.js"},
-    "./tabs": {"types": "./dist/header/tabs.d.js", "import": "./dist/tabs.js"}
+    "./cards": {"types": "./dist/cards.d.js", "import": "./dist/cards.js"},
+    "./events": {"types": "./dist/events.d.js", "import": "./dist/events.js"},
+    "./form": {"types": "./dist/form.d.js", "import": "./dist/form.js"},
+    "./header": {"types": "./dist/header.d.js", "import": "./dist/header.js"},
+    "./tabs": {"types": "./dist/tabs.d.js", "import": "./dist/tabs.js"}
   },
   "scripts": {
     "build": "rollup -c",

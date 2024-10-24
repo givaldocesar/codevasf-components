@@ -1,0 +1,68 @@
+@use "../styles/breakpoints";
+@use "../styles/widths";
+@use "../styles/colors";
+
+.form {
+    width: widths.$s-full;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+}
+
+.title {
+    color: colors.$std;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid colors.$std;
+}
+
+.row {
+    width: widths.$s-full;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap:5px;
+}
+
+.button, .input, .label {
+    font-size: small;
+}
+
+.button {
+    padding: 2.5px 5px;
+    background-color: colors.$std;
+    color: white;
+}
+
+.input {
+    background-color: white;
+    border: 1px solid colors.$std;
+    border-radius: 5px;
+    outline-color: colors.$active;
+}
+
+.input[type=file]::file-selector-button{
+    border: none;
+    background-color: colors.$std;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+        background-color: colors.$hover;
+    }
+}
+
+@media (min-width: breakpoints.$break-large){
+    .title {
+        font-size: x-large;
+    }
+
+    .input, .label, .button {
+        font-size: medium;
+    }
+
+    .button {
+        padding: 5px 10px;
+    }
+}

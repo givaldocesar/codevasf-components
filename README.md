@@ -7,9 +7,10 @@ Componentes React para desenvolvimento de projetos WEB da CODEVASF
     -- classNames
 
 ## Componentes
-    --  Column:         Separa o layout em colunas;
-    --  Title:          Cria um título;
-    --  Popup:          Cria uma Popup na tela;
+    --  Column:                             Separa o layout em colunas;
+    --  Title:                              Cria um título;
+    --  Popup:                              Cria uma Popup na tela;
+        --->contentClassName    <string>    className para a caixa de conteúdo da Popup.
     
     --  Header      Cria um Header;
         ╚> Brand:           Cria uma logomarca com um icone da CODEVASF. Aceita elementos filhos.
@@ -32,7 +33,15 @@ Componentes React para desenvolvimento de projetos WEB da CODEVASF
                             }[]>                        -content:   Contéudo que aparecerá ao ter sua aba ativada.
         
         OBS: A ordem das abas segue a ordem listada em 'items'.
+    
+    --  Form:               Formulário e itens pré-estilizados.
+        --  FormTitle       Um título para o 'form'.
+        --  FormRow         Linhas para o formulário.    
+        --  FormButton
+        --  FormInput
+        --  FormLabel     
 
 ## Events
     -- PopupEvent:                  Evento utilizado para exibição e controle de Popups.
         --->popup:  <ReactNode>     Popup a ser exibida. 
+ 

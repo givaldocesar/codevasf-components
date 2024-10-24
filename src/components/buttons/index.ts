@@ -1,1 +1,1 @@
-export { default as RemoveIcon} from "./RemoveIcon";
+export { default as RemoveButton } from "./RemoveButton";
