@@ -1,3 +1,4 @@
+export { BaseButton } from "./buttons";
 export * from "./cards";
 export * from "./events";
 export * from "./form";

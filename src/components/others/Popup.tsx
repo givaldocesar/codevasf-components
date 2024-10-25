@@ -1,6 +1,6 @@
-import { RemoveButton } from "../../buttons";
-import { PopupEvent } from "../../events";
-import styles from "./Popup.module.scss";
+import { RemoveButton } from "../buttons";
+import { PopupEvent } from "../events";
+import styles from "./Components.module.scss";
 
 const Popup: React.FC<React.HTMLAttributes<HTMLDivElement>&{
     contentClassName: string
