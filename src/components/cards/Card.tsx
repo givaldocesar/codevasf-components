@@ -1,6 +1,10 @@
+import React from "react";
 import styles from "./Cards.module.scss";
 
-const Card: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", children}) => {
+export default function Card({
+    className="", 
+    children
+} : React.HTMLAttributes<HTMLDivElement>){
     return (
         <div className={`${styles.card} ${className}`}>
             <div className={styles.overlayer} />
@@ -8,5 +12,3 @@ const Card: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", chi
         </div>
     );
 }
-
-export default Card;

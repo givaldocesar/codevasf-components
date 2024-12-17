@@ -1,10 +1,11 @@
+import React from "react";
 import BaseButton from "./BaseButton";
 import styles from "./Button.module.scss";
 
-const RemoveButton: React.FC<React.HTMLAttributes<HTMLOrSVGElement>> = ({
+export default function RemoveButton({
     className="",
     ...props
-}) => {
+}: React.HTMLAttributes<HTMLOrSVGElement>){
     return (
         <BaseButton 
             className={`${styles.remove_button} ${className}`} 
@@ -18,4 +19,3 @@ const RemoveButton: React.FC<React.HTMLAttributes<HTMLOrSVGElement>> = ({
     );
 }
 
-export default RemoveButton;

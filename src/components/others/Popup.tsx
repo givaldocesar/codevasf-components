@@ -1,14 +1,17 @@
+import React from "react";
 import { RemoveButton } from "../buttons";
 import { PopupEvent } from "../events";
 import styles from "./Components.module.scss";
 
-const Popup: React.FC<React.HTMLAttributes<HTMLDivElement>&{
+interface PopupProps extends React.HTMLAttributes<HTMLDivElement>{
     contentClassName: string
-}> = ({
+}
+
+export default function Popup({
     children,
     className="",
     contentClassName=""
-}) => {
+} : PopupProps){
     function close(evt: React.MouseEvent<HTMLOrSVGElement, MouseEvent>){
         evt.target.dispatchEvent(new PopupEvent(null));
     }
@@ -23,5 +26,3 @@ const Popup: React.FC<React.HTMLAttributes<HTMLDivElement>&{
         </div>
     );
 }
-
-export default Popup;

@@ -3,15 +3,17 @@ import { usePathname } from "next/navigation";
 import classNames from "classnames";
 import styles from "./Header.module.scss";
 
-const DropDownMenu: React.FC<React.HTMLAttributes<HTMLDivElement>&{
+interface DropDownMenuProps extends React.HTMLAttributes<HTMLDivElement> {
     title?: string;
     rootURL?: string;
-}> = ({
+}
+
+export default function DropDownMenu({
     children,
     className="",
     title,
     rootURL=""
-}) => {
+} : DropDownMenuProps ){
     const currentPath = usePathname();
 
     return (
@@ -27,5 +29,3 @@ const DropDownMenu: React.FC<React.HTMLAttributes<HTMLDivElement>&{
         </div>
     );
 }
-
-export default DropDownMenu;

@@ -1,6 +1,13 @@
+import React from "react";
 import styles from "./Components.module.scss";
 
-const Title: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({className="", children}) => {
+function Title({
+    className="", 
+    children
+} : {
+    className?: string;
+    children?: React.ReactNode
+}){
     return (
         <h3 className={`${styles.title} ${className}`}>
             { children }

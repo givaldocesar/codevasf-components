@@ -1,12 +1,14 @@
+import React from "react";
 import styles from "./Form.module.scss";
 
-const BaseInput: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
+export default function BaseInput({
     className="",
     ...props
-}) => {
+} : React.InputHTMLAttributes<HTMLInputElement>){
     return (
-        <input className={`${styles.input} ${className}`} {...props} />
+        <input 
+            className={`${styles.input} ${className}`} 
+            {...props} 
+        />
     );
 }
-
-export default BaseInput;

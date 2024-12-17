@@ -1,14 +1,13 @@
+import React from "react";
 import styles from "./Form.module.scss";
 
-const FormTitle: React.FC<React.HTMLAttributes<HTMLSpanElement>> = ({
+export default function FormTitle({
     children,
     className=""
-}) => {
+} : React.HTMLAttributes<HTMLSpanElement>){
     return (
         <span className={`${styles.title} ${className}`}>
             { children }
         </span>
     );
 }
-
-export default FormTitle;

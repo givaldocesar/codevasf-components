@@ -1,6 +1,10 @@
+import React from "react";
 import styles from "./Header.module.scss";
 
-const Header: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", children}) => {
+export default function Header({
+    className="", 
+    children
+} : React.HTMLAttributes<HTMLDivElement>){
     return (
         <div className={`${styles.header} ${className}`}>
             { children }
@@ -8,7 +12,6 @@ const Header: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", c
     );
 }
 
-export default Header;
 export { Header };
 export { default as Brand } from "./Brand";
 export { default as Navbar } from "./Navbar";

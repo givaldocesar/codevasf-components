@@ -1,10 +1,13 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import styles from "./Header.module.scss";
 import icon from "../../assets/icons/menu.png";
 
 
-const Navbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({children, className=""}) => {
+export default function Navbar({
+    children, 
+    className=""
+} : React.HTMLAttributes<HTMLDivElement>){
     const menus = useRef<HTMLDivElement>(null);
 
     function changeVisibility(evt: React.MouseEvent<HTMLButtonElement>){ 
@@ -26,5 +29,3 @@ const Navbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({children, class
         </div>
     );
 }
-
-export default Navbar;

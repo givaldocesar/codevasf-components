@@ -1,9 +1,13 @@
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
 import styles from "./Header.module.scss";
 
-const Menu: React.FC<React.LinkHTMLAttributes<HTMLLinkElement>> = ({href='', children}) => {
+export default function Menu({
+    href='', 
+    children
+} : React.LinkHTMLAttributes<HTMLLinkElement>){
     const currentPath = usePathname();
 
     return (
@@ -17,5 +21,3 @@ const Menu: React.FC<React.LinkHTMLAttributes<HTMLLinkElement>> = ({href='', chi
         </Link>
     );
 }
-
-export default Menu;

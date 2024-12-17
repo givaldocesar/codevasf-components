@@ -2,11 +2,13 @@ import React, { useState, forwardRef } from "react";
 import classNames from "classnames";
 import styles from "./Tabs.module.scss";
 
-const TabsArea = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>&{
+interface TabsProps extends React.HTMLAttributes<HTMLDivElement>{
     tabsClassname?: string;
     items?: {title?: string, content?: React.ReactNode}[];
     defaultTab?: number;
-}>(({
+}
+
+const TabsArea = forwardRef<HTMLDivElement, TabsProps>(({
     items=[],
     defaultTab=0,
     className="",
@@ -44,6 +46,4 @@ const TabsArea = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>
 });
 
 export default TabsArea;
-export {
-    TabsArea
-}
+export { TabsArea };

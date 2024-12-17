@@ -1,10 +1,11 @@
+import React from "react";
 import styles from "./Button.module.scss";
 
-const BaseButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
+export default function BaseButton({
     children,
     className,
     ...props
-}) => {
+}: React.ButtonHTMLAttributes<HTMLButtonElement>){
     return (
         <button
             className={`${styles.button} ${className}`} 
@@ -14,5 +15,3 @@ const BaseButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
         </button>
     );
 }
-
-export default BaseButton;

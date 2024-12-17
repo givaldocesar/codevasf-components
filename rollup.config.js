@@ -23,10 +23,11 @@ export default [
             resolve(),
             commonjs(),
             typescript({ tsconfig: './tsconfig.json' }),
-            postcss( {
+            postcss({
                 extract: `styles_components.css`,
-                modules: true
-            } ) 
+                modules: true,
+                use: { sass: { silenceDeprecations: ['legacy-js-api'] }}
+            }) 
         ]
     },
     rollupTypes({input: "src/components/index.ts", name: "index"}),

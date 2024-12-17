@@ -1,8 +1,12 @@
+import React from "react";
 import Image from "next/image";
 import styles from "./Header.module.scss";
 import icon from "../../assets/icons/codevasf_icon.png";
 
-const Brand: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", children}) => {
+export default function Brand({
+    className="", 
+    children
+} : React.HTMLAttributes<HTMLDivElement>){
     return (
         <div className={`${styles.brand} ${className}`}>
             <Image
@@ -17,5 +21,3 @@ const Brand: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", ch
         </div>
     );
 }
-
-export default Brand;

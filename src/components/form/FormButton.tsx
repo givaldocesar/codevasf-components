@@ -1,12 +1,13 @@
-import BaseButton from "../buttons/BaseButton";
+import React from "react";
+import { BaseButton } from "../buttons";
 import styles from "./Form.module.scss";
 
-const FormButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
+export default function FormButton({
     children,
     className="",
     type="button",
     ...props
-}) => {
+} : React.ButtonHTMLAttributes<HTMLButtonElement>){
     return (
         <BaseButton 
             className={`${styles.button} ${className}`} 
@@ -17,5 +18,3 @@ const FormButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
         </BaseButton>
     );
 }
-
-export default FormButton;

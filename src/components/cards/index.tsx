@@ -1,7 +1,10 @@
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "./Cards.module.scss";
 
-const CardsArea: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", children}) => {
+export default function CardsArea({
+    className="", 
+    children
+} : React.HTMLAttributes<HTMLDivElement>){
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -35,7 +38,6 @@ const CardsArea: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className=""
     );
 }
 
-export default CardsArea;
 export { CardsArea };
 export { default as Card } from "./Card";
 export { default as CardContent } from "./CardContent";

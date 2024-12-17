@@ -1,9 +1,10 @@
+import React from "react";
 import styles from "./Form.module.scss";
 
-const Form: React.FC<React.FormHTMLAttributes<HTMLFormElement>> = ({
+export default function Form({
     children,
     className=""
-}) => {
+} : React.FormHTMLAttributes<HTMLFormElement>){
     return (
         <form className={`${styles.form} ${className}`}>
             { children }
@@ -11,7 +12,6 @@ const Form: React.FC<React.FormHTMLAttributes<HTMLFormElement>> = ({
     );
 }
 
-export default Form;
 export { Form };
 export { default as FormButton } from "./FormButton";
 export { default as FormInput } from "./FormInput";

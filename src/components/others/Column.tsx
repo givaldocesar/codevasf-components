@@ -1,11 +1,14 @@
+import React from 'react';
 import styles from './Components.module.scss';
 
-const Column: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({className="", children, ...props}) => {
+export default function Column({
+    className="", 
+    children, 
+    ...props
+} : React.HTMLAttributes<HTMLDivElement>){
     return (
         <div className={`${styles.column} ${className}`} {...props}>
             { children }
         </div>
     );
 }
-
-export default Column;
