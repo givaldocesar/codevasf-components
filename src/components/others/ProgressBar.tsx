@@ -1,18 +1,17 @@
-import React from "react";
 import styles from "./Components.module.scss";
 
-interface ProgressBarProps extends React.HTMLAttributes<HTMLDivElement>{
-    barClassName?: string;
-    progress?: number;
-    infinity?:boolean;
-}
 
 export default function ProgressBar({
     className="",
     barClassName="",
     progress=0,
     infinity
-} : ProgressBarProps){
+} : {
+    className?: string;
+    barClassName?: string;
+    progress?: number;
+    infinity?:boolean;
+}){
 
     if(infinity){
         return (

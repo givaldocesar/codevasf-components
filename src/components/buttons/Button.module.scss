@@ -21,35 +21,8 @@
     }
 }
 
-.remove_button{
-    width: widths.$s-6;
-    height: widths.$s-6;
-    background-color: white;
-
-    svg {
-        line {
-            stroke: black;
-            stroke-linecap: square;
-            stroke-width: 7px;
-        }
-    }
-
-    &:hover {
-        svg {
-            line {
-                stroke: white;
-            }
-        }
-    }
-}
-
 @media (min-width: breakpoints.$break-large){
     .button {
         border-width: 2px;
-    }
-    
-    .remove_button {
-        width: widths.$s-7;
-        height: widths.$s-7;
     }
 }

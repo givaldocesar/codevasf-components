@@ -8,9 +8,18 @@ Componentes React para desenvolvimento de projetos WEB da CODEVASF
 
 ## Componentes
     --  Column:                             Separa o layout em colunas;
-    --  Title:                              Cria um título;
+    --  DecoratedLink:                      Link formatado com as especificações da CODEVASF.
+   
     --  Popup:                              Cria uma Popup na tela;
         --->contentClassName    <string>    className para a caixa de conteúdo da Popup.
+    
+    --  ProgressBar                         Uma barra de progresso.
+        --->barClassName:       <string>    Altera o estilo do pistão da barra.
+        --->progress:           <number>    Progresso atual da barra.
+        --->infinity:           <boolean>   Faz a barra carregar infinitamente em loop.
+    
+    --  SpinLoader:                         Um ícone de carregamento giratório.
+    --  Title:                              Cria um título;
     
     --  Header      Cria um Header;
         ╚> Brand:           Cria uma logomarca com um icone da CODEVASF. Aceita elementos filhos.
@@ -40,6 +49,9 @@ Componentes React para desenvolvimento de projetos WEB da CODEVASF
         --  FormButton
         --  FormInput
         --  FormLabel     
+    
+    -- Icons:
+        -CloseIcon:         Ícone SVG em formato de X.
 
 ## Events
     -- PopupEvent:                  Evento utilizado para exibição e controle de Popups.

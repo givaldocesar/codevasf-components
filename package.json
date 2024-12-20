@@ -1,19 +1,43 @@
 {
   "name": "codevasf-components",
   "type": "module",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
   "files": [
     "dist"
   ],
   "exports": {
-    "./styles": { "import": "./dist/styles.css"},
-    ".": {"types": "./dist/index.d.ts", "import": "./dist/index.js"},
-    "./cards": {"types": "./dist/cards.d.js", "import": "./dist/cards.js"},
-    "./events": {"types": "./dist/events.d.js", "import": "./dist/events.js"},
-    "./form": {"types": "./dist/form.d.js", "import": "./dist/form.js"},
-    "./header": {"types": "./dist/header.d.js", "import": "./dist/header.js"},
-    "./tabs": {"types": "./dist/tabs.d.js", "import": "./dist/tabs.js"}
+    "./styles": {
+      "import": "./dist/styles.css"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./cards": {
+      "types": "./dist/cards.d.js",
+      "import": "./dist/cards.js"
+    },
+    "./events": {
+      "types": "./dist/events.d.js",
+      "import": "./dist/events.js"
+    },
+    "./form": {
+      "types": "./dist/form.d.js",
+      "import": "./dist/form.js"
+    },
+    "./header": {
+      "types": "./dist/header.d.js",
+      "import": "./dist/header.js"
+    },
+    "./icons": {
+      "types": "./dist/icons.d.js",
+      "import": "./dist/icons.js"
+    },
+    "./tabs": {
+      "types": "./dist/tabs.d.js",
+      "import": "./dist/tabs.js"
+    }
   },
   "scripts": {
     "build": "rollup -c",
@@ -40,16 +64,17 @@
   "peerDependencies": {
     "classnames": "^2.5.1",
     "next": "^15.0.0",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "sass": "^1.77.8"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-image": "^3.0.3",
-    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-typescript": "^12.1.1",
-    "@types/react": "^18.3.3",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "rollup": "^4.21.3",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",

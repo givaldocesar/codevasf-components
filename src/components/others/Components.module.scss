@@ -90,6 +90,21 @@
     100% { width: 100%; }
 }
 
+//SPINLOADER
+
+.spin_loader {
+    border: 5px solid colors.$std;
+    border-top-color: colors.$active;
+    border-radius: 50%;
+    animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    50% { transform: rotate(180deg) }
+    100% { transform: rotate(360deg) }
+}
+
 @media (min-width: breakpoints.$break-large){
     .title {
         font-size: x-large;
