@@ -36,6 +36,7 @@
 }
 
 .input {
+    height: 30px;
     background-color: white;
     border: 1px solid colors.$std;
     border-radius: 5px;
@@ -50,6 +51,36 @@
     &:hover {
         cursor: pointer;
         background-color: colors.$hover;
+    }
+}
+
+.password {
+    flex: 9;
+}
+
+.password_button {
+    flex: 1;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: lightgray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        cursor: pointer;
+        background-color: colors.$hover;
+
+        img {
+            filter: invert(1)
+        }
+    }
+
+    img {
+        width: 80%;
+        height: 80%;
     }
 }
 

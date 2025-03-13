@@ -4,11 +4,11 @@ import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
-import rollupTypes from './rollup-types.js';
+import { dts } from 'rollup-plugin-dts';;
 
 export default [
     {
-        input: "src/components/index.ts",
+        input: "./index.ts",
         output: [
             {
                 file: `dist/index.js`,
@@ -30,11 +30,10 @@ export default [
             }) 
         ]
     },
-    rollupTypes({input: "src/components/index.ts", name: "index"}),
-    rollupTypes({input: "src/components/cards/index.tsx", name: "cards"}),
-    rollupTypes({input: "src/components/events/index.ts", name: "events"}),
-    rollupTypes({input: "src/components/form/index.tsx", name: "form"}),
-    rollupTypes({input: "src/components/header/index.tsx", name: "header"}),
-    rollupTypes({input: "src/components/icons/index.ts", name: "icons"}),
-    rollupTypes({input: "src/components/tabs/index.tsx", name: "tabs"})
+    {
+        input: "./index.ts",
+        output: [{ file: `dist/index.d.ts`, format: "esm" }],
+        external: [/\.css$/],
+        plugins: [dts()],
+    }
 ]

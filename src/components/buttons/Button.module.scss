@@ -11,10 +11,12 @@
     border-radius: 5px;
 
     &:hover {
+        cursor: pointer;
         background-color: colors.$hover;
     }
 
     &:disabled {
+        cursor: pointer;
         border-color: colors.$gray-400;
         background-color: colors.$gray-200;
         pointer-events: none;

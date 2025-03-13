@@ -46,9 +46,10 @@ Componentes React para desenvolvimento de projetos WEB da CODEVASF
     --  Form:               Formulário e itens pré-estilizados.
         --  FormTitle       Um título para o 'form'.
         --  FormRow         Linhas para o formulário.    
-        --  FormButton
-        --  FormInput
-        --  FormLabel     
+        --  FormButton      button pré-formatado
+        --  FormInput       input pré-formatado
+        --  FormLabel       label pré-formatada
+        --  FormPassword    input para senhas com botão para mostrar/ocultar a senha
     
     -- Icons:
         -CloseIcon:         Ícone SVG em formato de X.
@@ -56,4 +57,17 @@ Componentes React para desenvolvimento de projetos WEB da CODEVASF
 ## Events
     -- PopupEvent:                  Evento utilizado para exibição e controle de Popups.
         --->popup:  <ReactNode>     Popup a ser exibida. 
+
+## Authenticator
+    -- Classe para usar os métodos de autenticação do firebase da Google Cloud.
+    -- Necessário ter as variáveis de ambiente:
+        --- NEXT_PUBLIC_API_KEY com a chave da api do firebase
+        --- NEXT_PUBLIC_FIREBASE_DOMAIN com a url de domínio do firebase.
+
+    ### Métodos
+        signIn(email: string, password: string) => Promise<UserCredentials>
+            --> Faz login do usuário e retorna suas credenciais.
+
+## Firebase 
+    -- Classe para usar os métodos de gerenciamento de usuários do firebase
  

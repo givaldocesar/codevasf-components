@@ -1,7 +1,7 @@
 {
   "name": "codevasf-components",
   "type": "module",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
   "files": [
     "dist"
@@ -19,24 +19,28 @@
       "import": "./dist/cards.js"
     },
     "./events": {
-      "types": "./dist/events.d.js",
+      "types": "./dist/events.d.ts",
       "import": "./dist/events.js"
     },
     "./form": {
-      "types": "./dist/form.d.js",
+      "types": "./dist/form.d.ts",
       "import": "./dist/form.js"
     },
     "./header": {
-      "types": "./dist/header.d.js",
+      "types": "./dist/header.d.ts",
       "import": "./dist/header.js"
     },
     "./icons": {
-      "types": "./dist/icons.d.js",
+      "types": "./dist/icons.d.ts",
       "import": "./dist/icons.js"
     },
     "./tabs": {
-      "types": "./dist/tabs.d.js",
+      "types": "./dist/tabs.d.ts",
       "import": "./dist/tabs.js"
+    },
+    "./utils": {
+      "types": "./dist/utils.d.ts",
+      "import": "./dist/utils.js"
     }
   },
   "scripts": {
@@ -63,6 +67,8 @@
   "homepage": "https://github.com/givaldocesar/codevasf-components#readme",
   "peerDependencies": {
     "classnames": "^2.5.1",
+    "firebase": "^11.4.0",
+    "firebase-admin": "^13.2.0",
     "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

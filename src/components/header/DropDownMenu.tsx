@@ -19,7 +19,7 @@ export default function DropDownMenu({
     return (
         <div className={classNames({
             [styles.dropdown]: true,
-            [styles.active]: currentPath.split("\\").includes(rootURL),
+            [styles.active]: currentPath.split("/").includes(rootURL),
             [className]: className !== "" ? true : false,
         })}>
             <span>{title}</span>

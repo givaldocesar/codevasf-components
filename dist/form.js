@@ -3,6 +3,7 @@ export {
     FormButton,
     FormInput,
     FormLabel,
+    FormPassword,
     FormRow,
     FormTitle
 } from "./index.js"
