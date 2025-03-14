@@ -39,7 +39,7 @@ export default [
     {
         input: "./index_firebase.ts",
         output: {
-            file: `dist/firebase.js`,
+            file: `dist/firebase/index.js`,
             format: 'esm',
             exports: 'named',
             sourcemap: true,
@@ -50,5 +50,11 @@ export default [
             commonjs(),
             typescript({ tsconfig: './tsconfig.json' }),
         ]
+    },
+    {
+        input: "./index_firebase.ts",
+        output: { file: `dist/firebase/index.d.ts`, format: "esm" },
+        external: [/\.css$/],
+        plugins: [dts()],
     },
 ]

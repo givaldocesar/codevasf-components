@@ -96,4 +96,4 @@ class Firebase {
 }
 
 export { Firebase as default };
-//# sourceMappingURL=firebase.js.map
+//# sourceMappingURL=index.js.map

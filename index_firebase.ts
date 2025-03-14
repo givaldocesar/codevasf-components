@@ -1,2 +1,2 @@
-import Firebase from "@/libs/firebase";
+import Firebase from "./src/libs/firebase";
 export default Firebase;
