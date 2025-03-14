@@ -6,4 +6,4 @@ export * from "./src/components/header";
 export * from "./src/components/icons";
 export * from "./src/components/tabs";
 export * from "./src/components/others";
-export * from "./libs/index";
+export * from "./src/libs";

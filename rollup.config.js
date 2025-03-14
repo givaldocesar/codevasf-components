@@ -9,14 +9,14 @@ import { dts } from 'rollup-plugin-dts';;
 export default [
     {
         input: "./index.ts",
-        output: [
-            {
-                file: `dist/index.js`,
-                format: 'esm',
-                exports: 'named',
-                sourcemap: true
-            }
-        ],
+        output: {
+            dir: `dist`,
+            format: 'esm',
+            exports: 'named',
+            sourcemap: true,
+            preserveModules: true,
+            banner: "'use client'"
+        },
         plugins: [
             external(),
             image(),
@@ -32,7 +32,7 @@ export default [
     },
     {
         input: "./index.ts",
-        output: [{ file: `dist/index.d.ts`, format: "esm" }],
+        output: { file: `dist/index.d.ts`, format: "esm" },
         external: [/\.css$/],
         plugins: [dts()],
     }
