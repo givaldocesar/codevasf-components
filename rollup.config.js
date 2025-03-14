@@ -35,5 +35,20 @@ export default [
         output: { file: `dist/index.d.ts`, format: "esm" },
         external: [/\.css$/],
         plugins: [dts()],
-    }
+    },
+    {
+        input: "./index_firebase.ts",
+        output: {
+            file: `dist/firebase.js`,
+            format: 'esm',
+            exports: 'named',
+            sourcemap: true,
+        },
+        plugins: [
+            external(),
+            resolve(),
+            commonjs(),
+            typescript({ tsconfig: './tsconfig.json' }),
+        ]
+    },
 ]

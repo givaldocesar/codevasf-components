@@ -1,7 +1,7 @@
 {
   "name": "codevasf-components",
   "type": "module",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
   "files": ["dist", "src", "libs"],
   "exports": {
@@ -9,7 +9,7 @@
     ".":"./dist/index.js",
     "./cards":"./dist/cards/index.js",
     "./events": "./dist/events/index.js",
-    "./firebase": "./src/libs/firebase.ts",
+    "./firebase": "./dist/firebase.js",
     "./form": "./dist/form/index.js",
     "./header": "./dist/header/index.js",
     "./icons": "./dist/icons/index.js",
