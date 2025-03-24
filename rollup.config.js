@@ -14,7 +14,6 @@ export default [
             format: 'esm',
             exports: 'named',
             sourcemap: true,
-            preserveModules: true,
             banner: "'use client'"
         },
         plugins: [

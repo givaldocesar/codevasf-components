@@ -3,11 +3,11 @@
   "type": "module",
   "version": "1.1.7",
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
-  "files": ["dist", "src", "libs"],
+  "files": ["dist"],
   "exports": {
     "./styles": "./dist/styles.css",
     ".":"./dist/index.js",
-    "./cards":"./dist/cards/index.js",
+    "./cards":"./dist/src/components/cards/index.js",
     "./events": "./dist/events/index.js",
     "./firebase": "./dist/firebase/index.js",
     "./form": "./dist/form/index.js",
