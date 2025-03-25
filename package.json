@@ -1,7 +1,7 @@
 {
   "name": "codevasf-components",
   "type": "module",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Componentes React para desenvolvimento de projetos WEB da CODEVASF",
   "files": ["dist"],
   "exports": {
