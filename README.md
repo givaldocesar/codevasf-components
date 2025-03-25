@@ -52,8 +52,19 @@ Componentes React para desenvolvimento de projetos WEB da CODEVASF
         --  FormPassword    input para senhas com botão para mostrar/ocultar a senha
     
     -- Icons:
-        -CloseIcon:         Ícone SVG em formato de X.
-
+        --- CloseIcon:         Ícone SVG em formato de X.
+    
+    -- User:
+        --- Login                                   Formulário para login de usuário.
+            ---> title          <ReactNode>         Titulo da tela de Login.
+            ---> authenticator  <Authenticator>     Objeto Authenticator do Firebase.
+            ---> validateUser   <(user: FirebaseUser | null, path?: string) => Promise<[User | null, string | null]>    Função para validação do usuário.
+        
+        --- LogoutButton                            Botão para executar Logout.
+            ---> user           <User>              usuário a ser deslogado.
+            ---> authenticator  <Authenticator>     Objeto Authenticator do Firebase.
+            ---> parentPopup    <HTMLElement>       Elemento o qual o popup de logout pertencerá.
+            
 ## Events
     -- PopupEvent:                  Evento utilizado para exibição e controle de Popups.
         --->popup:  <ReactNode>     Popup a ser exibida. 

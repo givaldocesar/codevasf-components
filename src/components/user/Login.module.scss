@@ -1,0 +1,109 @@
+@use "../styles/widths";
+@use "../styles/colors";
+@use "../styles/breakpoints";
+
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: widths.$s-3;
+
+    input, button {
+        height: 10;
+        text-align: center;
+    }
+}
+
+.user {
+    width: 100%;
+}
+
+.button {
+    width: widths.$s-48;
+    font-weight: bold;
+}
+
+.loading {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    color: gray;
+}
+
+.status {
+    width: 100%;
+    height: widths.$s-10;
+    text-align: center;
+    color: red;
+}
+
+.logout {
+    border-left: 2px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    span {
+        display: none;
+        padding: 0px 5px;
+        font-weight: bold;
+    }
+}
+
+.icon {
+    width: widths.$s-12;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        cursor: pointer;
+        background-color: colors.$hover;
+    }
+
+    img {
+        width: 75%;
+        height: 75%;
+    }
+}
+
+.logout_popup {
+    width: widths.$s-64;
+    height: widths.$s-28;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: widths.$s-5;
+
+    span {
+        width: 100%;
+        font-weight: bold;
+        font-size: x-large;
+        text-align: center;
+    }
+}
+
+.logout_close_button {
+    top: -15px;
+    right: -15px;
+}
+
+.row {
+    display: flex;
+    gap: widths.$s-5;
+
+    button {
+        width: widths.$s-32;
+        font-size: small;
+    }
+}
+
+@keyframes pulse {
+    50% {
+      opacity: 0.5;
+    }
+}
+
+@media (min-width: breakpoints.$break-large){
+    .logout {
+        span { display: block;}
+    }
+}
