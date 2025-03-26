@@ -40,25 +40,25 @@
   },
   "homepage": "https://github.com/givaldocesar/codevasf-components#readme",
   "peerDependencies": {
-    "classnames": "^2.5.1",
-    "firebase": "^11.4.0",
-    "firebase-admin": "^13.2.0",
-    "next": "^15.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sass": "^1.77.8"
+    "classnames": "^2",
+    "firebase": "^11",
+    "firebase-admin": "^13",
+    "next": "^15",
+    "react": "^19",
+    "react-dom": "^19",
+    "sass": "^1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^28.0.1",
-    "@rollup/plugin-image": "^3.0.3",
-    "@rollup/plugin-node-resolve": "^16.0.0",
-    "@rollup/plugin-typescript": "^12.1.1",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
-    "rollup": "^4.21.3",
-    "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "typescript": "^5.5.3"
+    "@rollup/plugin-commonjs": "^28",
+    "@rollup/plugin-image": "^3",
+    "@rollup/plugin-node-resolve": "^16",
+    "@rollup/plugin-typescript": "^12",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "rollup": "^4",
+    "rollup-plugin-dts": "^6",
+    "rollup-plugin-peer-deps-external": "^2",
+    "rollup-plugin-postcss": "^4",
+    "typescript": "^5"
   }
 }
