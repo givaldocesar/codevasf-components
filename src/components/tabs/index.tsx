@@ -21,6 +21,7 @@ const TabsArea = forwardRef<HTMLDivElement, TabsProps>(({
             <div className={`${styles.tabs} ${tabsClassname}`}>
                 {items.map((item, index) => 
                     <button 
+                        type="button"
                         key={`${item.title}_${index}`} 
                         onClick={()=> setCurrentTab(index)}
                         className={classNames({

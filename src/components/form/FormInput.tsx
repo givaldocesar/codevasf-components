@@ -1,14 +1,16 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styles from "./Form.module.scss";
 
-export default function BaseInput({
+const FormInput = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(({
     className="",
     ...props
-} : React.InputHTMLAttributes<HTMLInputElement>){
+}, ref) => {
     return (
         <input 
             className={`${styles.input} ${className}`} 
             {...props} 
         />
     );
-}
+});
+
+export default FormInput;

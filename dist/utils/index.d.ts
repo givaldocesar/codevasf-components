@@ -1,5 +1,6 @@
 export {
     Authenticator,
-    Firebase,
-    SpinLoader
+    CloseButton,
+    SpinLoader,
+    checkCNPJ
 } from "../index";

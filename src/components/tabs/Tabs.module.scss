@@ -24,6 +24,7 @@
     font-weight: bold;
 
     &:hover {
+        cursor: pointer;
         background-color: colors.$hover;
         color: white;
     }

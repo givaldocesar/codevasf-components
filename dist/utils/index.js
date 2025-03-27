@@ -1,4 +1,6 @@
 export {
     Authenticator,
-    SpinLoader
+    CloseButton,
+    SpinLoader,
+    checkCNPJ
 } from "../index";

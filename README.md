@@ -50,6 +50,7 @@ Componentes React para desenvolvimento de projetos WEB da CODEVASF
         --  FormInput       input pré-formatado
         --  FormLabel       label pré-formatada
         --  FormPassword    input para senhas com botão para mostrar/ocultar a senha
+        --  CNPJInput       input para que verifica/valida CNPJ'S
     
     -- Icons:
         --- CloseIcon:         Ícone SVG em formato de X.

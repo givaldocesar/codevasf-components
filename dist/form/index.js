@@ -5,5 +5,6 @@ export {
     FormLabel,
     FormPassword,
     FormRow,
-    FormTitle
+    FormTitle,
+    CNPJInput
 } from "../index.js"

@@ -13,9 +13,11 @@ export default function Form({
 }
 
 export { Form };
+export { default as CNPJInput } from "./CNPJInput";
 export { default as FormButton } from "./FormButton";
 export { default as FormInput } from "./FormInput";
 export { default as FormLabel } from "./FormLabel";
 export { default as FormPassword } from "./FormPassword";
 export { default as FormRow } from "./FormRow";
 export { default as FormTitle } from "./FormTitle";
+export { checkCNPJ } from "./utils";
