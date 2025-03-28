@@ -5,13 +5,12 @@ export default function Popup({
     children,
     className="",
     contentClassName="",
-} : {
-    children?: React.ReactNode;
-    className?: string;
+    ...props
+} : React.HTMLAttributes<HTMLDivElement>&{
     contentClassName?: string;
 }){
     return (
-        <div className={`${styles.popup} ${className}`}>
+        <div className={`${styles.popup} ${className}`} {...props}>
             <div className={styles.overlay} />
             <div className={`${styles.content} ${contentClassName}`}>
                 { children }

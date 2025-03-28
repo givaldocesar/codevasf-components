@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import FormInput from "./FormInput";
 import { checkCNPJ } from "./utils";
-
+import styles from "./Form.module.scss";
 
 export default function CNPJ({
     type,
@@ -31,9 +31,9 @@ export default function CNPJ({
             value = value.replace(/[^\d]/g, '');
     
             if(checkCNPJ(value)){
-                target.classList.remove('!border-red-500');
+                target.classList.remove(styles.error);
             } else {
-                target.classList.add('!border-red-500');
+                target.classList.add(styles.error);
             }
         }
 

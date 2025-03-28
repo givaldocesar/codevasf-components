@@ -5,6 +5,8 @@ export {
     FormLabel,
     FormPassword,
     FormRow,
+    FormSelect,
+    FormTextArea,
     FormTitle,
     CNPJInput
 } from "../index.js"

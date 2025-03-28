@@ -7,6 +7,7 @@ const FormInput = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInp
 }, ref) => {
     return (
         <input 
+            ref={ref}
             className={`${styles.input} ${className}`} 
             {...props} 
         />

@@ -35,12 +35,22 @@
     color: white;
 }
 
-.input {
+.input, .text_area, .select {
+    padding: 0px 5px;
     height: 30px;
     background-color: white;
     border: 1px solid colors.$std;
     border-radius: 5px;
     outline-color: colors.$active;
+
+    &:disabled {
+        border: gray;
+        background-color: lightgrey;
+    }
+}
+
+.text_area {
+    padding: 2px;
 }
 
 .input[type=file]::file-selector-button{
@@ -84,12 +94,16 @@
     }
 }
 
+.error {
+    border: 2px solid red !important;
+}
+
 @media (min-width: breakpoints.$break-large){
     .title {
         font-size: x-large;
     }
 
-    .input, .label, .button {
+    .input, .label, .button, .text_area {
         font-size: medium;
     }
 
