@@ -4,7 +4,9 @@ node_modules/
 dist/*.d.ts
 dist/index.*
 dist/styles_components.css
+dist/firebase/index.*
 
 # misc
 .rollup.cache/
 .tsbuildinfo
+package-lock.json
