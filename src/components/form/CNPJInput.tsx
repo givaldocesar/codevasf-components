@@ -32,8 +32,10 @@ export default function CNPJ({
     
             if(checkCNPJ(value)){
                 target.classList.remove(styles.error);
+                ref.current?.setCustomValidity("");
             } else {
                 target.classList.add(styles.error);
+                ref.current?.setCustomValidity("CNPJ inválido");
             }
         }
 

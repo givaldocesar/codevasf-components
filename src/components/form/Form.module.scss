@@ -51,6 +51,10 @@
         border: gray;
         background-color: lightgrey;
     }
+
+    &:invalid {
+        border-color: red;
+    }
 }
 
 .text_area {
