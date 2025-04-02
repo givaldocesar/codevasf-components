@@ -3,10 +3,11 @@ import styles from "./Form.module.scss";
 
 export default function Form({
     children,
-    className=""
+    className="", 
+    ...props
 } : React.FormHTMLAttributes<HTMLFormElement>){
     return (
-        <form className={`${styles.form} ${className}`}>
+        <form className={`${styles.form} ${className}`} {...props}>
             { children }
         </form>
     );
