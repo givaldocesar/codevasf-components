@@ -37,9 +37,10 @@ Componentes React para desenvolvimento de projetos WEB da CODEVASF
     --  TabsArea:                                   Cria uma área com abas.
         --->tabsClassName   <string>                className para o 'div' contendo as abas.
         --->defaultTab      <number>                INTEIRO corresponde a aba padrão, default = 0;
-        --->items           <{title: <string>,      Items a serem exibidos como conteúdo de cada aba.
-                             content: <ReactNode>       -title:     Texto que aparecerá na aba.
-                            }[]>                        -content:   Contéudo que aparecerá ao ter sua aba ativada.
+        --->items           <Item[]>                 Items a serem exibidos como conteúdo de cada aba.
+                                                        -title:     Texto que aparecerá na aba.
+                                                        -content:   Contéudo que aparecerá ao ter sua aba ativada.
+                                                        -onActive:  Funcão que será executada ao abrir a aba.
         
         OBS: A ordem das abas segue a ordem listada em 'items'.
     
