@@ -36,6 +36,7 @@ export default function CNPJ({
             } else {
                 target.classList.add(styles.error);
                 ref.current?.setCustomValidity("CNPJ inválido");
+                ref.current?.reportValidity();
             }
         }
 
